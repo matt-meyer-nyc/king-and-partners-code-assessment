@@ -1,4 +1,318 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul&display=swap'); */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
+  /* --font-body: '__Chivo_3ea283', '__Chivo_Fallback_3ea283', sans-serif;
+  --font-heading: '__Asul_f051dd', '__Asul_Fallback_f051dd', sans-serif; */
+  --background: #f2ece2;
+  --primary: #0b5841;
+  --secondary: #ffffff;
+}
+
+body {
+  /* font-family: var(--font-body); */
+  background-color: var(--background);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 132%;
+  font-style: light;
+  margin: unset;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /* font-family: var(--font-heading); */
+  font-weight: 400;
+  letter-spacing: -2%;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 90px;
+  line-height: 80px;
+  /* margin-block-start: unset;
+  margin-block-end: unset; */
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 51px;
+  /* margin-block-start: unset;
+  margin-block-end: unset; */
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 49px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+p {
+  color: var(--primary);
+  line-height: 22px;
+  /* margin-block-start: unset;
+  margin-block-end: unset; */
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 30px;
+  color: var(--secondary);
+  padding: 15px 32px;
+  margin-top: 30px;
+  border-style: none;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  h1 {
+    line-height: 109px;
+  }
+  button {
+    padding: 15px 37px;
+  }
+}
+
+/* desktop */
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 176px;
+    line-height: 213px;
+  }
+
+  h2 {
+    font-size: 80px;
+    line-height: 97px;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 97px;
+  }
+
+  h4 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  button {
+    padding: 20px 55px;
+  }
+}
+
+/*  
+=============================================================
+BEM Execution demonstratino as requested for assessment 
+=============================================================
+*/
+
+.accordion {
+  width: 1368px;
+  /* height: 863px; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 100px;
+  position: relative;
+}
+
+.accordion-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.accordion-col-one {
+  width: 100%;
+}
+
+.accordion-col-one h3 {
+  margin-bottom: 30px;
+  font-size: 38px;
+}
+
+.accordion-heading,
+.accordion-text--open {
+  border-radius: 30px;
+  width: 100%;
+  border: 1px solid var(--primary);
+}
+
+.accordion-heading {
+  /* border: 1px solid var(--primary); */
+  color: var(--primary);
+  padding: 0 24px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: -2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.accordion-heading:nth-of-type(5) {
+  margin-bottom: 60px;
+}
+
+.accordion-heading span {
+  /* padding-top: 19px;
+  padding-bottom: 20px; */
+}
+
+.accordion-heading div {
+  padding-top: 23px;
+  padding-bottom: 21.5px;
+}
+
+.accordion-text--open {
+  background-color: var(--primary);
+  border: 0px;
+  color: var(--secondary);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 24px;
+  margin-bottom: 12px;
+}
+
+.accordion-text--open:last-of-type {
+  margin-bottom: 60px;
+  margin-top: -48px;
+}
+
+.accordion-text--open > div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 19px;
+  padding-bottom: 28px;
+}
+
+.accordion-text--open div span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.accordion-text--open div div {
+  padding-left: 5px;
+}
+
+.accordion-text--open span:nth-child(2) {
+  font-size: 16px;
+  padding-bottom: 36px;
+}
+
+.accordion-text--closed {
+  display: none;
+}
+
+.accordion-col-two {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.accordion-col-two--img {
+  width: 100%;
+  height: auto;
+	border-radius: 30px;
+}
+
+@media (min-width: 768px) {
+  .accordion {
+    margin-top: 102px;
+  }
+
+  .accordion-container {
+    gap: 24px;
+    flex-direction: row;
+    padding: 0 27px 0 24px;
+  }
+
+  .accordion-col-one {
+    width: 348px;
+  }
+
+  .accordion-col-two {
+    width: 328px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .accordion {
+    margin-top: 145px;
+  }
+
+  .accordion-container {
+    gap: 36px;
+  }
+  .accordion-col-one {
+    width: 666px;
+  }
+  .accordion-heading {
+    padding: 0 36px;
+  }
+
+  .accordion-heading span {
+    /* padding-top: 19px; */
+  }
+
+  .accordion-heading div {
+    /* padding-top: 23px; */
+  }
+
+  .accordion-col-two {
+    width: 328px;
+    width: 666px;
+  }
+}
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -104,4 +418,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
