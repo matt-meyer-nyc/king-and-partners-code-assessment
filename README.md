@@ -70,7 +70,7 @@ Next configurations have been incorporated:
 
 --for simplicity sake, since this is more of a design oriented project, wrapping a tags for links (<Link> elements in Next.js) have been discluded with the excption of the navigation modal
 
-## Challenging Aspects / Aspects that could be improved
+### Challenging Aspects / Aspects that could be improved
 
 --for the footer, although the pages listed in the ul (under the heading) are detailed in Figma in mobile as having a line-height of 30px, when rendered, this caused way too much vertical distance between the li items. to split the difference and attempt to match the design I reduced the line-height to 15px. Despite this, the height of the main footer component (in my design) is 398px, while the design has the height at 364px; the cat's meow logo, the social logos, and the font-sizes of all the pages listed are correct, and the padding surrounding them appears to be correct, so I'm wasn't exactly sure how to resolve this.
   
@@ -79,6 +79,8 @@ Next configurations have been incorporated:
 --I decided to go (on the whole) with a mobile first approach, with media queries increasing as the page size increases. However, the hero required a mix of media queries I'm pretty certain there's a cleaner way to handle this, and would learn to learn more about what might be a better approach
   
 --for desktop sizes wasn't sure how to handle the hero heading text breaking to 3 lines and the line-height specified in Figma (213px) causing this to make the hero text expand outside it's container (wasn't sure whether you might be looking for a dynamic responsive font size, or if the line-height should be reduced, etc.), I added a media query between 768px and 955px to handle this be reducing the line-height between certain dimensions (and kept the text broken into 3 lines) ...same for tablet where I added a media query between 376px and 461px to account for the text breaking to 3 lines and having too large a line height. Along these lines, in addition, I wasn't sure whether the larger text denoted in Figma for desktop should persist through the tablet breakpoint (when it approaches being closer to the tablet breakpoint, the text feel very large). However, conversely, if the text size for tablet persists up until the desktop breakpoint, the text feels way too small at sizes closer to desktop (1080px+ etc.)
+  
+ ---
 
 ## Nex.js boiler plate
 
