@@ -30,7 +30,6 @@ Next configurations have been incorporated:
 -- project utilizes next/font utilized (in place of static Google font files provided via link to use as CDN); this approach adds optimization since font file doesn't need to be called repeatedly
 -- given that best practice would be to scope the CSS to each component, my overall styling approach utilizes CSS modules; however in globals.css, towards the bottom, I have included BEM CSS (per the project requirements) related to the accordion component to demonstrate knowledge about this CSS approach (and for this component utilized dynamic css class prefixes appended to the classes in BEM style)
 -- for simplicity, files are being served locally as part of code base, but in a production app, a better option would be something like using CDN for the images so that they can be cached
--- project was created using 
 -- project was created using npx create-next-app@latest; certain boiler plate files have been left in place (like Home.modules.css) but were not necessary to execute the project
 
 
