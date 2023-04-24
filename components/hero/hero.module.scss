@@ -102,9 +102,12 @@
   z-index: 2;
   color: #ba692e;
   text-align: center;
-  padding-top: 94px;
-  font-size: 153px;
-  padding: 0 35px 0 108px;
+  // padding-top: 94px;
+  font-size: 162px;
+  // white-space: nowrap;
+  line-height: 213px;
+  letter-spacing: -0.02em;
+  padding-left: 108px;
 }
 
 .heroImg {
@@ -118,10 +121,11 @@
 }
 
 @media (min-width: 768px) {
-  .heroHeading {
-    font-size: 153px;
-    line-height: 213px;
-  }
+  // .heroHeading {
+  //   font-size: 176px;
+  //   letter-spacing: -0.05em;
+  //   line-height: 213px;
+  // }
 }
 
 @media (min-width: 768px) and (max-width: 955px) {
@@ -130,29 +134,37 @@
   }
 }
 
-@media (min-width: 1440px) {
-  .heroHeading {
-    font-size: 153px;
-  }
-}
+// @media (min-width: 1440px) {
+//   .heroHeading {
+//     font-size: 162px;
+//     white-space: nowrap;
+//   }
+// }
 
 @media (max-width: 768px) {
   .heroContainer {
-    // max-height: 437px;
+    max-height: 437px;
     // height: 100%;
     width: 100%;
   }
   .heroImg {
-    width: auto;
-    height: 100%;
-    max-height: 437px;
+    width: 100%;
+    height: auto;
+    // max-height: 437px;
   }
 
   .heroHeading {
     // line-height: 109px;
     margin-top: 10px;
     font-size: 80px;
-    padding: 10px 0 0 62px;
+    padding-left: 62px;
+    line-height: 109px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 461px) {
+  .heroHeading {
+    line-height: 65px;
   }
 }
 
