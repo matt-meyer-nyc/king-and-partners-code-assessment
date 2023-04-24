@@ -26,6 +26,7 @@ default Next.js boilerplate instructions also included at bottom of this file
 ### General Notes:
 
 --since feedback was provided that using a framework for this project would be a nice-to-have, I decided to work with Next.js to challenge myself (in my prior interviews I've discussed that working with JS is something I'm learning about every day, and I'm passionate about growing as a developer utilizing this framework with WP)
+
 Next configurations have been incorporated:
 -- project utilizes next/font utilized (in place of static Google font files provided via link to use as CDN); this approach adds optimization since font file doesn't need to be called repeatedly
 -- given that best practice would be to scope the CSS to each component, my overall styling approach utilizes CSS modules; however in globals.css, towards the bottom, I have included BEM CSS (per the project requirements) related to the accordion component to demonstrate knowledge about this CSS approach (and for this component utilized dynamic css class prefixes appended to the classes in BEM style)
